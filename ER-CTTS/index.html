@@ -39,17 +39,18 @@
 						 </br> 2) <b>FastSpeech2 w/ Emphasis</b> focuses on synthesizing emphasis speech for individual sentences. It leverages FastSpeech2 as the backbone and is studied to change the degree of emphasis by adjusting specific acoustic features, such as pitch and energy, etc.
 						 </br> 3) <b>DailyTalk</b> is an advanced CTTS baseline. It proposed coarse-grained text context modeling in dialogue history to enhance speech expressiveness.
 						 </br> 4) <b>FCTalker</b>: further employed coarse-grained and fine-grained context modeling.
-						 </br> 5) <b>GCN</b> adopted the homogeneous graph to model the multi-modal context in conversation. 
-						 </br> 6) <b>ECSS</b> is a powerful expressive conversational TTS. It utilized heterogeneous graph-based context modeling to achieve expressive rendering for CTTS.
-						 </br> 7) <b>ER-CTTS</b>: Our proposed dialogue emphasizes speech synthesis.
+						 </br> 5) <b>M2-CTTS</b>: further employedcoarse-grained and fine-grained context modeling of text and audio.
+						 </br> 6) <b>GCN</b> adopted the homogeneous graph to model the multi-modal context in conversation. 
+						 </br> 7) <b>ECSS</b> is a powerful expressive conversational TTS. It utilized heterogeneous graph-based context modeling to achieve expressive rendering for CTTS.
+						 </br> 8) <b>ER-CTTS</b>: Our proposed dialogue emphasizes speech synthesis.
 						 </br><strong>Ablation Experiment:</strong>
-						 </br> 8) <b>ER-CTTS w/o Coarse-grained Encoders</b>
-						 </br> 9) <b>ER-CTTS w/o Fine-grained Encoders</b>
-						 </br> 10) <b>ER-CTTS w/o Hybrid-grained Fusion</b>
-						 </br> 11) <b>ER-CTTS w/o Cross-modaily Fusion</b>
-						 </br> 12) <b>ER-CTTS w/o Bidirectional Context Modeling</b>
-						 </br> 13) <b>ER-CTTS w/o Memory Enhancement</b>
-						 </br> 13) <b>ER-CTTS w/o Emphasis Intensity</b>
+						 </br> 9) <b>ER-CTTS w/o Coarse-grained Encoders</b>
+						 </br> 10) <b>ER-CTTS w/o Fine-grained Encoders</b>
+						 </br> 11) <b>ER-CTTS w/o Hybrid-grained Fusion</b>
+						 </br> 12) <b>ER-CTTS w/o Cross-modaily Fusion</b>
+						 </br> 13) <b>ER-CTTS w/o Bidirectional Context Modeling</b>
+						 </br> 14) <b>ER-CTTS w/o Memory Enhancement</b>
+						 </br> 15) <b>ER-CTTS w/o Emphasis Intensity</b>
 					</div>
 					<div class="section-content ">
 						<hr />
@@ -136,6 +137,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -145,6 +147,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -159,6 +162,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/val/9_0_d467.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/val/9_0_d467.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/val/9_0_d467.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/val/9_0_d467.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/val/9_0_d467.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/val/9_0_d467.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/val/9_0_d467.wav" controls="" preload=""></audio></td>
@@ -207,7 +211,7 @@
 							
 							
 							<!-- 一句话分割 -->
-							<div class="module-content">
+							<!-- <div class="module-content">
 								<span class="note">Of <b>course not</b>. People all over the world watch it on <b>TV</b>, or <b>listen</b> to it on the <b>radio</b>.</span>
 								<table id="table_4">
 									<thead>
@@ -335,7 +339,7 @@
 									
 									</tbody>
 								</table>
-							</div>
+							</div> -->
 							<!-- 一句话分割 -->
 							
 							
@@ -385,6 +389,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -394,6 +399,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -408,6 +414,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/2_1_d2494.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/2_1_d2494.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/2_1_d2494.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/2_1_d2494.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/2_1_d2494.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/2_1_d2494.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/2_1_d2494.wav" controls="" preload=""></audio></td>
@@ -505,6 +512,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -514,6 +522,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -528,6 +537,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/3_0_d2523.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/3_0_d2523.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/3_0_d2523.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/3_0_d2523.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/3_0_d2523.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/3_0_d2523.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/3_0_d2523.wav" controls="" preload=""></audio></td>
@@ -632,6 +642,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -641,6 +652,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -655,6 +667,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/4_0_d1919.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/4_0_d1919.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/4_0_d1919.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/4_0_d1919.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/4_0_d1919.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/4_0_d1919.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/4_0_d1919.wav" controls="" preload=""></audio></td>
@@ -758,6 +771,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -767,6 +781,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -781,6 +796,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/4_0_d2460.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/4_0_d2460.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/4_0_d2460.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/4_0_d2460.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/4_0_d2460.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/4_0_d2460.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/4_0_d2460.wav" controls="" preload=""></audio></td>
@@ -894,6 +910,7 @@
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
+										   <col width=20%></col>
 										</colgroup>
 										<tr>
 										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
@@ -903,6 +920,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2-CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -917,6 +935,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/6_1_d110.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/6_1_d110.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/6_1_d110.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/6_1_d110.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/6_1_d110.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/6_1_d110.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/6_1_d110.wav" controls="" preload=""></audio></td>
@@ -1030,12 +1049,14 @@
 									</tbody>
 								</table>
 							</div>
+							
 							<div class="module-content">
 								<table id="table_4">
 									<thead>
 										<colgroup>
 										   <col width=15%></col>
 										   <col width=25%></col>
+										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
 										   <col width=20%></col>
@@ -1053,6 +1074,7 @@
 										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2_CTTS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
 										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
 										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
@@ -1067,6 +1089,7 @@
 											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/9_0_d21.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/dailytalk/test/9_0_d21.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/fctalker/test/9_0_d21.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/9_0_d21.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/gcn/test/9_0_d21.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/ecss/test/9_0_d21.wav" controls="" preload=""></audio></td>
 											<td style="text-align: center"><audio src="./audio/erctts/test/9_0_d21.wav" controls="" preload=""></audio></td>
@@ -1112,6 +1135,181 @@
 							</div>
 							<!-- 一句话分割 -->
 							
+							<!-- 一句话分割 -->
+							<div class="module-content">
+								<span class="note">Don't <b> mention </b> it. That's what friends are for!</span>
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=10%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>Conversation history</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>speech</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">1<sup>th</sup></td>
+											<td style="text-align: center">Are you alright, Ethan? You don't seem to be as cheerful as you normally are.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/0_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">2<sup>th</sup></td>
+											<td style="text-align: center">To be honest, Ava, I've just had a really bad day.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/1_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">3<sup>th</sup></td>
+											<td style="text-align: center">What happened?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/2_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">4<sup>th</sup></td>
+											<td style="text-align: center">First, I slept through my alarm and ended up two hours late to work.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/3_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">5<sup>th</sup></td>
+											<td style="text-align: center">What did your boss say?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/4_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">6<sup>th</sup></td>
+											<td style="text-align: center">He told me that if I showed up late one more time, he'd fire me. He's so mean!</td>
+											<td style="text-align: center"><audio src="./audio/history/153/5_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">7<sup>th</sup></td>
+											<td style="text-align: center">That's horrible. Was that the first time you'd shown up late to work?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/6_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">8<sup>th</sup></td>
+											<td style="text-align: center">That was my second time. The first time, umm I was in a car accident.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/7_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">9<sup>th</sup></td>
+											<td style="text-align: center">Is your boss Chinese?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/8_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">10<sup>th</sup></td>
+											<td style="text-align: center">No, he's from Australia. Before I met him, I thought Australians were supposed to be relaxed and easy-going.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/9_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">11<sup>th</sup></td>
+											<td style="text-align: center">What are you going to do?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/10_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">12<sup>th</sup></td>
+											<td style="text-align: center">I think I'm going to look for another job. I need to find a boss that is a bit more sensitive and optimistic.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/11_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">13<sup>th</sup></td>
+											<td style="text-align: center">That sounds like a sensible plan. Do you want me to help you with your job search?</td>
+											<td style="text-align: center"><audio src="./audio/history/153/12_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+										<tr>
+											<td style="text-align: center">14<sup>th</sup></td>
+											<td style="text-align: center">That's very generous of you. Thanks for the offer.</td>
+											<td style="text-align: center"><audio src="./audio/history/153/13_0_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<div class="module-content">
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=15%></col>
+										   <col width=25%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>current</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>text</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>Ground Truth</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>FastSpeech2 w/o Emphasis</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>DailyTalk</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>FCTalker</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>M2_CTTS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>GCN</strongCTTS></th>
+										  <th colspan="1" style="text-align: center"><strong>ECSS</strong></th>
+										  <th colspan="1" style="text-align: center"><strong style="color: #1d5da4;">ER-CTTS</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center">15<sup>th</sup></td>
+											<td style="text-align: center">Don't <b>mention</b> it. That's what friends are for!</td>
+											<td style="text-align: center"><audio src="./audio/ground_truth/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/fastspeech2/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/fastspeech2_emp/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/dailytalk/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/fctalker/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/m2ctts/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/gcn/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/ecss/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts/test/14_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+									
+									</tbody>
+								</table>
+								
+								<table id="table_4">
+									<thead>
+										<colgroup>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										   <col width=20%></col>
+										</colgroup>
+										<tr>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Coarse-grained Encoders</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Fine-grained Encoders</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Hybrid-grained Fusion</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Cross-modaily Fusion</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Bidirectional Context Modeling</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Memory Enhancement</strong></th>
+										  <th colspan="1" style="text-align: center"><strong>ER-CTTS w/o Emphasis Intensity</strong></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td style="text-align: center"><audio src="./audio/erctts_cora/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_fine/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_cross_scale/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_cross_model/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_fwd/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_lter/test/14_1_d153.wav" controls="" preload=""></audio></td>
+											<td style="text-align: center"><audio src="./audio/erctts_no_int/test/14_1_d153.wav" controls="" preload=""></audio></td>
+										</tr>
+									
+									</tbody>
+								</table>
+							</div>
+							<!-- 一句话分割 -->
 							
 							
 							
